@@ -13,7 +13,7 @@
         <td class="actions">
             <%= link_to("edit", edit_book_path(book)) %>
             <%= link_to("show details", book_path(book)) %>
-            <%= link_to("delete", book_path(book), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this book?" }) %>
+            <%= link_to("delete", delete_book_path(book)) %>
         </td>
     </tr>
     <% end %>

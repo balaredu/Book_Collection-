@@ -1,2 +1,23 @@
-<h1>Books#UpdateBook</h1>
-<p>Find me in app/views/books/UpdateBook.html.erb</p>
+<h1><%= @book.title %>!</h1>
+<p>Change <%= @book.title %>'s title </p>
+
+
+<div>
+
+<%= form_for(@book) do |b| %>
+    <% %>
+    <table summary="Book form fields">
+        <tr>
+            <th>Title</th>
+            <td><%= b.text_field(:title) %></td>
+        </tr>
+
+    </table>
+
+
+    <div >
+        <%= b.submit("Update Book") %>
+    </div>
+
+<% end %> 
+<%= link_to("<< back", {controller: "main", action: "index"}) %>
