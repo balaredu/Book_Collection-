@@ -8,6 +8,9 @@
         <tr>
             <th>Title</th>
             <td><%= b.text_field(:title) %></td>
+            <td><%= b.text_field(:author) %></td>
+            <td><%= b.number_field(:price) %></td>
+            <td><%= b.date_select(:published_date) %></td>
         </tr>
 
     </table>
