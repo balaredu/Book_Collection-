@@ -1,0 +1,33 @@
+<h1>Add a Book!</h1>
+<p>Enter in your text to add a book!</p>
+<div>
+
+<%= form_for(@book) do |b| %>
+    <% %>
+    <table summary="Book form fields">
+        <tr>
+            <th>Title</th>
+            <td><%= b.text_field(:title) %></td>
+            <td><%= b.text_field(:author) %></td>
+            <td><%= b.number_field(:price) %></td>
+            <td><%= b.date_select(:published_date) %></td>
+        </tr>
+
+    </table>
+
+
+    <div >
+        <%= b.submit("Create Book") %>
+    </div>
+
+<% end %> 
+
+
+
+
+
+<%= link_to("<< back", {controller: "main", action: "index"}) %>
+</p>
+
+</div>
+
