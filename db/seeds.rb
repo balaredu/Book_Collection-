@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Book.create!([
+    {title: "the Life of a turtle", author: "A great authoer", price: 10, published_date: Date.new(2026, 9, 12)},
+    {title: "the Life of a bug", author: "A great authoer", price: 10, published_date: Date.new(2026, 9, 12)},
+    {title: "the Life of a frog", author: "A great authoer", price: 10, published_date: Date.new(2026, 9, 12)},
+    {title: "the Life of a truck", author: "A great authoer", price: 10, published_date: Date.new(2026, 9, 12)}
+])
