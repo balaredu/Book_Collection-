@@ -7,3 +7,81 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+case Rails.env
+when "development"
+  Book.find_or_create_by!(title: "the Life of a turtle") do |book|
+    book.author = "A great author"
+    book.price = 10
+    book.published_date = Date.new(2026, 9, 12)
+  end
+
+  Book.find_or_create_by!(title: "the Life of a bug") do |book|
+    book.author = "A great author"
+    book.price = 10
+    book.published_date = Date.new(2026, 9, 12)
+  end
+  Book.find_or_create_by!(title: "the Life of a bug") do |book|
+    book.author = "A great author"
+    book.price = 10
+    book.published_date = Date.new(2026, 9, 12)
+  end
+
+  Book.find_or_create_by!(title: "the Life of a bug") do |book|
+    book.author = "A great author"
+    book.price = 10
+    book.published_date = Date.new(2026, 9, 12)
+  end
+  Book.find_or_create_by!(title: "the Life of a bug") do |book|
+    book.author = "A great author"
+    book.price = 10
+    book.published_date = Date.new(2026, 9, 12)
+  end
+
+when "test"
+  # smaller/faster fixture-like data for specs
+  Book.find_or_create_by!(title: "Test Book One") do |book|
+    book.author = "Test Author"
+    book.price = 5
+    book.published_date = Date.new(2026, 1, 1)
+  end
+
+  Book.find_or_create_by!(title: "Test Book One") do |book|
+    book.author = "Test Author"
+    book.price = 5
+    book.published_date = Date.new(2026, 1, 1)
+  end
+
+
+  Book.find_or_create_by!(title: "Test Book One") do |book|
+    book.author = "Test Author"
+    book.price = 5
+    book.published_date = Date.new(2026, 1, 1)
+  end
+
+
+  Book.find_or_create_by!(title: "Test Book One") do |book|
+    book.author = "Test Author"
+    book.price = 5
+    book.published_date = Date.new(2026, 1, 1)
+  end
+
+
+  Book.find_or_create_by!(title: "Test Book One") do |book|
+    book.author = "Test Author"
+    book.price = 5
+    book.published_date = Date.new(2026, 1, 1)
+  end
+
+  Book.find_or_create_by!(title: "Test Book One") do |book|
+    book.author = "Test Author"
+    book.price = 5
+    book.published_date = Date.new(2026, 1, 1)
+  end
+
+when "production"
+  # maybe just the bare minimum required records, no fake/demo data
+  # e.g. admin user, default categories, etc.
+
+else
+  raise "Unknown Rails.env: #{Rails.env}"
+end
