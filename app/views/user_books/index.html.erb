@@ -3,6 +3,10 @@
 <% content_for :title, "User books" %>
 
 <h1>User books</h1>
+
+<h1>You're logged in! Welcome to the Dashboard!</h1>
+<%= link_to "Sign Out", destroy_admin_session_path %>
+
 <table>
   <thead>
     <tr>
