@@ -1,2 +1,2 @@
-release: rails db:migrate
+release: rails db:migrate && rails db:seed
 
