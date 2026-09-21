@@ -20,18 +20,18 @@ when "development"
     book.price = 10
     book.published_date = Date.new(2026, 9, 12)
   end
-  Book.find_or_create_by!(title: "the Life of a bug") do |book|
+  Book.find_or_create_by!(title: "the Life of a tub") do |book|
     book.author = "A great author"
     book.price = 10
     book.published_date = Date.new(2026, 9, 12)
   end
 
-  Book.find_or_create_by!(title: "the Life of a bug") do |book|
+  Book.find_or_create_by!(title: "the Life of a dump") do |book|
     book.author = "A great author"
     book.price = 10
     book.published_date = Date.new(2026, 9, 12)
   end
-  Book.find_or_create_by!(title: "the Life of a bug") do |book|
+  Book.find_or_create_by!(title: "the Life of a shup") do |book|
     book.author = "A great author"
     book.price = 10
     book.published_date = Date.new(2026, 9, 12)
@@ -45,34 +45,34 @@ when "test"
     book.published_date = Date.new(2026, 1, 1)
   end
 
-  Book.find_or_create_by!(title: "Test Book One") do |book|
+  Book.find_or_create_by!(title: "Test Book twho") do |book|
     book.author = "Test Author"
     book.price = 5
     book.published_date = Date.new(2026, 1, 1)
   end
 
 
-  Book.find_or_create_by!(title: "Test Book One") do |book|
+  Book.find_or_create_by!(title: "Test Book three") do |book|
     book.author = "Test Author"
     book.price = 5
     book.published_date = Date.new(2026, 1, 1)
   end
 
 
-  Book.find_or_create_by!(title: "Test Book One") do |book|
+  Book.find_or_create_by!(title: "Test Book four") do |book|
     book.author = "Test Author"
     book.price = 5
     book.published_date = Date.new(2026, 1, 1)
   end
 
 
-  Book.find_or_create_by!(title: "Test Book One") do |book|
+  Book.find_or_create_by!(title: "Test Book five") do |book|
     book.author = "Test Author"
     book.price = 5
     book.published_date = Date.new(2026, 1, 1)
   end
 
-  Book.find_or_create_by!(title: "Test Book One") do |book|
+  Book.find_or_create_by!(title: "Test Book six") do |book|
     book.author = "Test Author"
     book.price = 5
     book.published_date = Date.new(2026, 1, 1)
@@ -81,7 +81,17 @@ when "test"
 when "production"
   # maybe just the bare minimum required records, no fake/demo data
   # e.g. admin user, default categories, etc.
+    Book.find_or_create_by!(title: "Philosipher stone") do |book|
+    book.author = "JK rowling"
+    book.price = 5
+    book.published_date = Date.new(2026, 1, 1)
+  end
 
+  Book.find_or_create_by!(title: "Deathly howls") do |book|
+    book.author = "JK rowling"
+    book.price = 5
+    book.published_date = Date.new(2026, 1, 1)
+  end
 else
   raise "Unknown Rails.env: #{Rails.env}"
 end

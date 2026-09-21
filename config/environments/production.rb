@@ -87,4 +87,6 @@ Rails.application.configure do
   #
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+  ENV['GOOGLE_OAUTH_CLIENT_ID'] = '479247618067-f1g9bif87s7oa1km27vl46s1oamiltd4.apps.googleusercontent.com'
+  ENV['GOOGLE_OAUTH_CLIENT_SECRET'] = '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'
 end
